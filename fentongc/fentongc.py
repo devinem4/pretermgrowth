@@ -52,7 +52,7 @@ def get_fenton_lms(
 
 
 def calc_zscore(
-    metric: str, sex: str, gestational_age_in_days: int, observation: float
+    metric: str, sex: str, gestational_age_in_days: int, measure: float
 ) -> float:
     """calculates a z-score using Fenton tables and the LMS methodology.
     
@@ -67,7 +67,7 @@ def calc_zscore(
         gestational_age_in_days {int} -- Patient gestational age. Ie, to calculate
             z-scores for a baby born at 24 weeks 0d on dol 5:
             gestational_age_in_days = 24 * 7 + 5 = 173
-        observation {float} -- the patient's value of the meausurement for which the
+        measure {float} -- the patient's value of the meausurement for which the
             z-score shall be calculated.
     
     Returns:
@@ -77,5 +77,5 @@ def calc_zscore(
     # get_fenton_lms will raise a value error if any parameters are bad
     l, m, s = get_fenton_lms(metric.lower(), sex.lower(), int(gestational_age_in_days))
 
-    return 1.2
+    return (measure / m) ** l - 1 / (l / s)
 
