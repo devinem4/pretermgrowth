@@ -1,0 +1,5 @@
+venv/
+.vscode/
+fentongc.egg-info/
+dist/
+__pycache__/
