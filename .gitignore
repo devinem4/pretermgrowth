@@ -1,5 +1,5 @@
 venv/
 .vscode/
-fentongc.egg-info/
+pretermgrowth.egg-info/
 dist/
 __pycache__/

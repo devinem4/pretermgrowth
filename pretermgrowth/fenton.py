@@ -15,7 +15,7 @@ with open(lms_file_path, "r") as lms_file:
         lms_rows.append(row)
 
 
-def get_fenton_lms(
+def get_lms(
     metric: str, sex: str, gestational_age_in_days: int
 ) -> (float, float, float):
     """returns the LMS parameters from Fenton tables.
@@ -75,7 +75,7 @@ def calc_zscore(
     """
 
     # get_fenton_lms will raise a value error if any parameters are bad
-    l, m, s = get_fenton_lms(metric.lower(), sex.lower(), int(gestational_age_in_days))
+    l, m, s = get_lms(metric.lower(), sex.lower(), int(gestational_age_in_days))
 
     return (measure / m) ** l - 1 / (l / s)
 

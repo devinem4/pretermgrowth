@@ -1,6 +1,5 @@
 from setuptools import setup, find_packages
+
 setup(
-    name="fentongc",
-    version="0.1",
-    packages=find_packages(),
+    name="pretermgrowth", version="0.1", packages=find_packages(),
 )
