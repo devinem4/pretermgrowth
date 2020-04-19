@@ -38,7 +38,6 @@ def get_lms(
         float -- s parameter
     """
     for row in lms_rows:
-        print(row)
         if (
             row["metric"] == metric
             and row["sex"] == sex
