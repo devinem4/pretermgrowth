@@ -38,7 +38,6 @@ def get_lms(
         float -- s parameter
     """
     for row in lms_rows:
-        print(row)
         if (
             row["metric"] == metric
             and row["sex"] == sex
@@ -78,4 +77,4 @@ def calc_zscore(
     # get_fenton_lms will raise a value error if any parameters are bad
     l, m, s = get_lms(metric.lower(), sex.lower(), int(gestational_age_in_days))
 
-    return (measure / m) ** l - 1 / (l / s)
+    return ((measure / m) ** l - 1) / (l * s)

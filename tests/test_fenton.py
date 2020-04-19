@@ -8,6 +8,16 @@ def test_calc_zscore_good_params():
     calc_zscore("wEIGHt", "F", 171.0, 2400)  # no ValueError raised
 
 
+def test_calc_zscore_vs_peditools():
+    # comparing results against https://peditools.org/fenton2013/index.php
+    assert round(calc_zscore("length", "m", 280, 54), 2) == 1.27
+    assert round(calc_zscore("weight", "m", 280, 2400), 2) == -2.71
+    assert round(calc_zscore("hc", "m", 280, 33), 2) == -1.44
+    assert round(calc_zscore("length", "f", 277, 54), 2) == 1.71
+    assert round(calc_zscore("weight", "f", 277, 2400), 2) == -2.17
+    assert round(calc_zscore("hc", "f", 277, 33), 2) == -1.06
+
+
 def test_get_lms_valid():
     l, m, s = get_lms("weight", "f", 171)
     assert l == 0.664117185
