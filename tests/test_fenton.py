@@ -10,9 +10,9 @@ def test_calc_zscore_good_params():
 
 def test_get_lms_valid():
     l, m, s = get_lms("weight", "f", 171)
-    assert l == 1.2
-    assert m == 2423.2
-    assert s == 33.1
+    assert l == 0.664117185
+    assert m == 642.3413675
+    assert s == 0.169472881
 
 
 def test_get_lms_invalid():
