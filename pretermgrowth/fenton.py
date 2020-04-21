@@ -40,8 +40,6 @@ class Fenton:
         Fenton TR and Kim JH, BMC Pediatrics 2013, 13:59
         http://www.ncbi.nlm.nih.gov/pubmed/23601190
 
-cls.lms_rows = rows
-
         Arguments:
             metric {str} -- Metric to calculate z-score for. Must be `weight`, `length`,
                 or `hc` (head circumference). Units must be in grams for weight, or cm
