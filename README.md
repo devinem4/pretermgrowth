@@ -4,9 +4,9 @@ A python package for calculating preterm infant growth statistics.
 Currently you can calculate z-scores for infants between ages 22w4d-50w0d.
 
 ```python
-from pretermgrowth.fenton import 
+from pretermgrowth.fenton import Fenton
 
-calc_zscore(
+Fenton.calc_zscore(
     metric="weight", # or "length" or "hc"
     sex="f", # or "m"
     gestational_age_in_days=158, # range = [158-350]
