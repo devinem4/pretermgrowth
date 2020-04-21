@@ -27,7 +27,6 @@ class Fenton:
                 row["m"] = float(row["m"])
                 row["s"] = float(row["s"])
                 rows.append(row)
-        print("getting lms rows")
 
         return rows
 
