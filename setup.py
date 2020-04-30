@@ -15,6 +15,6 @@ setup(
     long_description_content_type="text/markdown",
     keywords="preterm neonatology fenton growth",
     project_urls={"Source Code": "https://github.com/gammaflauge/pretermgrowth/"},
-    download_url="https://github.com/gammaflauge/pretermgrowth/archive/0.1.tar.gz",
+    download_url="https://github.com/gammaflauge/pretermgrowth/archive/v0.3.tar.gz",
     python_requires=">=3.6",
 )
