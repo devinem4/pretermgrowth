@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pretermgrowth",
-    version="0.1",
+    version="0.3",
     packages=find_packages(),
     # metadata to display on PyPI
     author="Matt Devine",
@@ -17,4 +17,5 @@ setup(
     project_urls={"Source Code": "https://github.com/gammaflauge/pretermgrowth/"},
     download_url="https://github.com/gammaflauge/pretermgrowth/archive/v0.3.tar.gz",
     python_requires=">=3.6",
+    include_package_data=True,
 )
